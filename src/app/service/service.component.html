@@ -1,0 +1,50 @@
+
+<!-- Asi se llama una funcion para ejecutar alguna logica  -->
+<!-- <input type="button" value="Cargar data" (click)="getUser()">
+
+<ul *ngFor="let users of user"  >
+
+    <div *ngIf="users.id === 2"> 
+
+        <li>
+        
+            {{ users.id}} 
+            {{ users.title }}
+            
+        </li>
+       <ul>
+        <li>
+            Body: {{users.body}}
+        </li>
+       </ul>
+
+    </div>
+
+</ul>
+
+ -->
+ <input type="button" value="Cargar data" (click)="getPasciente()">
+
+ <ul *ngFor="let users of pasciente"  >
+ 
+ 
+         <li>
+         
+        ID: {{ users.id}} 
+             
+             
+         </li>
+        <ul>
+         <li class="mayuscula">
+            {{ users.nombre }} 
+            {{users.apellido}}
+            <input type="button" value="Mostrar" routerLink="/detailUser/{{users.id}}">
+             
+         </li>
+        </ul>
+ 
+ 
+ </ul>
+ 
+  
+ 
