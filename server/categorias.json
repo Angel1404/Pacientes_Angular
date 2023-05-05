@@ -1,0 +1,39 @@
+{
+    "Categorias":[
+ {
+  "codigo": 1,
+  "estado": "Peso bajo",
+  "limInferior": 0,
+  "limSuperior": 18.5
+ },
+ {
+  "codigo": 2,
+  "estado": "Ideal",
+  "limInferior": 18.6,
+  "limSuperior": 24.9
+ },
+ {
+  "codigo": 3,
+  "estado": "Sobre Peso",
+  "limInferior": 25,
+  "limSuperior": 29.9
+ },
+ {
+  "codigo": 4,
+  "estado": "Obesidad",
+  "limInferior": 30,
+  "limSuperior": 34.9
+ },
+ {
+  "codigo": 5,
+  "estado": "Obesidad Severa",
+  "limInferior": 35,
+  "limSuperior": 39.9
+ },
+ {
+  "codigo": 6,
+  "estado": "Obesidad Morbida",
+  "limInferior": 40
+ }
+]
+}

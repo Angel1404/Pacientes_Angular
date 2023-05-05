@@ -1,0 +1,129 @@
+{
+    
+"Dieta":[
+ {
+  "categoria": 1,
+  "dieta": "Ensalada de pimientos\ny tomate asados.\nJudías blancas con\nverduras. Pan integral.\nFruta"
+ },
+ {
+  "categoria": 1,
+  "dieta": "Ensalada mixta.\nConejo al ajillo. Pan\nintegral. Fruta"
+ },
+ {
+  "categoria": 1,
+  "dieta": "Ensalada de\nlombarda, manzana\ny brotes de soja.\nSardinas al horno.\nPan integral. Fruta"
+ },
+ {
+  "categoria": 1,
+  "dieta": "Brochetas de verduras.\nGarbanzos con setas.\nPan integral. Fruta"
+ },
+ {
+  "categoria": 1,
+  "dieta": "Queso fresco\ndesnatado con 2\nbiscotes integrales"
+ },
+ {
+  "categoria": 1,
+  "dieta": "Yogur desnatado.\nFruta"
+ },
+ {
+  "categoria": 1,
+  "dieta": "Champiñones\nrehogados. Pavo a la\nplancha. Yogur\ndesnatado"
+ },
+ {
+  "categoria": 1,
+  "dieta": "Berenjenas rellenas de\nverduras. Yogur\ndesnatado"
+ },
+ {
+  "categoria": 1,
+  "dieta": "Ensalada de lechuga.\nRevuelto de\nespárragos. Cuajada\ncon miel"
+ },
+ {
+  "categoria": 1,
+  "dieta": "Frutos secos\ntostados sin sal"
+ },
+ {
+  "categoria": 1,
+  "dieta": "Proteinas"
+ },
+ {
+  "categoria": 1,
+  "dieta": "Arinas "
+ },
+ {
+  "categoria": 2,
+  "dieta": "Ensalada de\nlombarda, manzana\ny brotes de soja.\nSardinas al horno.\nPan integral. Fruta"
+ },
+ {
+  "categoria": 2,
+  "dieta": "Brochetas de verduras.\nGarbanzos con setas.\nPan integral. Fruta"
+ },
+ {
+  "categoria": 2,
+  "dieta": "Champiñones\nrehogados. Pavo a la\nplancha. Yogur\ndesnatado"
+ },
+ {
+  "categoria": 2,
+  "dieta": "Ensalada de lechuga.\nRevuelto de\nespárragos. Cuajada\ncon miel"
+ },
+ {
+  "categoria": 2,
+  "dieta": "Frutos secos\ntostados sin sal"
+ },
+ {
+  "categoria": 2,
+  "dieta": "Proteinas"
+ },
+ {
+  "categoria": 3,
+  "dieta": "Ensalada de pimientos\ny tomate asados.\nJudías blancas con\nverduras. Pan integral.\nFruta"
+ },
+ {
+  "categoria": 3,
+  "dieta": "Ensalada de\nlombarda, manzana\ny brotes de soja.\nSardinas al horno.\nPan integral. Fruta"
+ },
+ {
+  "categoria": 3,
+  "dieta": "Queso fresco\ndesnatado con 2\nbiscotes integrales"
+ },
+ {
+  "categoria": 3,
+  "dieta": "Champiñones\nrehogados. Pavo a la\nplancha. Yogur\ndesnatado"
+ },
+ {
+  "categoria": 3,
+  "dieta": "pescados"
+ },
+ {
+  "categoria": 4,
+  "dieta": "Ensalada de pimientos\ny tomate asados.\nJudías blancas con\nverduras. Pan integral.\nFruta"
+ },
+ {
+  "categoria": 4,
+  "dieta": "Yogur desnatado.\nFruta"
+ },
+ {
+  "categoria": 4,
+  "dieta": "Champiñones\nrehogados. Pavo a la\nplancha. Yogur\ndesnatado"
+ },
+ {
+  "categoria": 4,
+  "dieta": "Frutos secos\ntostados sin sal"
+ },
+ {
+  "categoria": 4,
+  "dieta": "pescados"
+ },
+ {
+  "categoria": 5,
+  "dieta": "Ensalada mixta.\nConejo al ajillo. Pan\nintegral. Fruta"
+ },
+ {
+  "categoria": 5,
+  "dieta": "Brochetas de verduras.\nGarbanzos con setas.\nPan integral. Fruta"
+ },
+ {
+  "categoria": 5,
+  "dieta": "pescados"
+ }
+]
+}

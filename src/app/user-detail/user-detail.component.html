@@ -1,29 +1,16 @@
 <ul>
     <li>
     
-   ID: {{ selectPasciente.id}} 
-        
-        
-    </li>
-   <ul>
-    <li class="mayuscula">
-      Peso: {{ selectPasciente.peso }} 
+   Categoria de peso:  {{ selectCategoria.estado}}
         
     </li>
+
+    Dietas:
+   <ul *ngFor="let plan of planDietarios">
     <li class="mayuscula">
-    Estatura: {{selectPasciente.estatura}}
-         
-     </li>
-     <li class="mayuscula">
-   
-        IMC: {{imc}}
-         
-     </li>
-     <li class="mayuscula">
-        Estado: {{imcResult}}
-         
-     </li>
+       {{ plan.dieta}}
    </ul>
-
-
+   
+   <input type="button" value="Volver" (click)="getBack()">
+      
 </ul>
