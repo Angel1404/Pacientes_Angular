@@ -20,7 +20,7 @@ export class ServiceComponent {
   }
 
   user : any ;
-  pascientes : IPascienteModel[] = [] ;
+  pascientes : any;
 
 //Peticion a la api de pascientes
   getPasciente() {
@@ -31,9 +31,9 @@ export class ServiceComponent {
   };
 
   //Metodo para navegar as la pantalla de detail
-  navigatorDetail(estatura : number, peso:number  ){ //Se piden por parametros los datos que necesitamos en la otra pantalla
+  pushDetailPasciente(estatura : number, peso:number  ){ //Se piden por parametros los datos que necesitamos en la otra pantalla
     const querys = {estatura : estatura, peso : peso}; // Se establecen los querys como mapa 
-    this.router.navigate(['/detailUser'], { queryParams: querys }); //Se navega con esta funcion a la otra pantalla, mandandole los datos por querys paramts.
+    this.router.navigate(['/detallePasciente'], { queryParams: querys }); //Se navega con esta funcion a la otra pantalla, mandandole los datos por querys paramts.
   }
 
 }

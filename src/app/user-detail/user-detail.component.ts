@@ -21,7 +21,7 @@ export class UserDetailComponent {
     this.estaturaUser = this.route.snapshot.queryParams['estatura']; //Se toma el dato de la estatura que se mando desde la pantalla principal como querys paramts
     this.pesoUser = this.route.snapshot.queryParams['peso'];
     
-    this.getCategoria(); //Se manda a llamar las categorias para mostar los detalles del user
+    this.getDataCategorias(); //Se manda a llamar las categorias para mostar los detalles del user
   }
 
   categorias : any ;
@@ -32,29 +32,27 @@ export class UserDetailComponent {
 
   estaturaUser : any ;
   pesoUser : any ;
-  imcResult: String = '';
-  imc: number = 0.0;
 
 
   
  //Metodo para hacer la llamada de la api de categorias y dieta
-  getCategoria() {
+  getDataCategorias() {
     return this.http.get<[ICategoriaModel]>( 'http://localhost:3001/Categorias' ).subscribe(( res: ICategoriaModel[] ) =>{
     this.categorias = res; //Asiganamos la respuesta de la api a nuestra variable local
 
-    this.calculateImc(); //Mandamos a calcular el IMC del user por los datos de la estatura y peso que se tomaron por querys
+    const result =  this.calcularIMCPasciente(); //Mandamos a calcular el IMC del user por los datos de la estatura y peso que se tomaron por querys
   for (let index = 0; index < this.categorias.length; index++) { //Se hace un for para recorrer la lista de categorias
     const categoria = this.categorias[index];
-    if(categoria.estado == this.imcResult){ // Se verifica que el estado de la categoria coindica con el IMC calculado
+    if(categoria.estado == result){ // Se verifica que el estado de la categoria coindica con el IMC calculado
       this.selectCategoria = categoria; //Se almacena la categoria que coincidio 
     }
   }
-    this.getDieta(); //Se manda a llamar las dietas resultantes de la categoria. y se hace el mismo proceso q en cateegoria
+    this.getDataDietas(); //Se manda a llamar las dietas resultantes de la categoria. y se hace el mismo proceso q en cateegoria
 
     });
   };
 
-getDieta() {
+getDataDietas() {
     return this.http.get<[IDietaModel]>( 'http://localhost:3002/Dieta' ).subscribe(( res: IDietaModel[] ) =>{
       this.dietas = res;
     console.log('DIETAS : ' + res);
@@ -69,41 +67,35 @@ getDieta() {
 
 
   //Calculo del IMC
-  calculateImc(){
+  calcularIMCPasciente() : String {
 
       const alturaCm = this.estaturaUser / 100;
       
-       this.imc = this.pesoUser / Math.pow(alturaCm,2);
+       const  imc = this.pesoUser / Math.pow(alturaCm,2);
 
-      if(this.imc < 18.5){
-        this.imcResult = 'Peso bajo';
-      return;
-      }
-
-      if(this.imc > 18.5 && this.imc <= 24.9){
-        this.imcResult = 'Ideal';
-      return;
+      if(imc < 18.5){
+        return 'Peso bajo';
       }
 
-      if(this.imc > 25.0 && this.imc <= 29.9){
-        this.imcResult = 'Sobre Peso';
-        return;
+      if(imc > 18.5 && imc <= 24.9){
+        return 'Ideal';
       }
-      if(this.imc > 29.9 && this.imc <= 34.9){
-        this.imcResult = 'Obesidad';
-        return;
+
+      if(imc > 25.0 && imc <= 29.9){
+        return'Sobre Peso';
       }
-   if(this.imc > 35 && this.imc <= 39.9){
-        this.imcResult = 'Obesidad Severa';
-        return;
+      if(imc > 29.9 && imc <= 34.9){
+        return'Obesidad';
       }
-      this.imcResult= 'Obesidad Morbida';
-      return;
+      if(imc > 35 && imc <= 39.9){
+        return 'Obesidad Severa';
+      }
+      return 'Obesidad Morbida';
   }
 
   //Metodo para regresar a la pantalla anterior
-  getBack(){
-    this.router.navigate(['/service']);
+  back(){
+    this.router.navigate(['/pascientes']);
 
   }
 

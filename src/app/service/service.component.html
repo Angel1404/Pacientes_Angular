@@ -17,7 +17,7 @@
       <tr *ngFor="let pasciente of pascientes">
         <td class="nombre">{{pasciente.nombre}} {{pasciente.apellido}}</td>
         <td class="id">ID: {{pasciente.id}}</td>
-        <td><input type="button" value="Mostrar" (click)="navigatorDetail(pasciente.estatura, pasciente.peso)"></td>
+        <td><input type="button" value="Mostrar" (click)="pushDetailPasciente(pasciente.estatura, pasciente.peso)"></td>
       </tr>
       </table>
   </div>
