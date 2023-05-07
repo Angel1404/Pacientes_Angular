@@ -1,16 +1,32 @@
-<ul>
-    <li>
-    
-   Categoria de peso:  {{ selectCategoria.estado}}
-        
-    </li>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<body>
+    <div class="pagina">
+      <table class="tabla">
+        <tr>
+          <td>
+            <div id="contenedor">
+              <div class="cont_titulo">
+                <p class="subtitulo">Categoria de peso: </p>
+                <p class="texto"> {{selectCategoria.estado}}</p>
+              </div>
+              <div class="cont_descripcion">
+                <p class="subtitulo">Dietas:</p>
+                <ul *ngFor="let plan of planDietarios">
+                  <li class="texto">
+                    {{plan.dieta}}
+                  </li>
+                </ul>
+              </div> 
+              <input type="button" value="Volver" (click)="getBack()">
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+  
+  
 
-    Dietas:
-   <ul *ngFor="let plan of planDietarios">
-    <li class="mayuscula">
-       {{ plan.dieta}}
-   </ul>
-   
-   <input type="button" value="Volver" (click)="getBack()">
-      
-</ul>
+
