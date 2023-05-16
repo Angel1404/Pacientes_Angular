@@ -1,5 +1,5 @@
 <!-- 
-    For para recorer la lista de pasciente que nos entrega la api
+    For para recorer la lista de tutoria que nos entrega la api
   -->
 <html lang="en">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,13 +11,13 @@
       <table>
       <td class="titulo">
         <div class="cont_titulo">
-        <span class="titulo" style="text-align: center;">Lista de pacientes</span>
+        <span class="titulo" style="text-align: center;">Lista de tutorias</span>
         </div>
       </td>
-      <tr *ngFor="let pasciente of pascientes">
-        <td class="nombre">{{pasciente.nombre}} {{pasciente.apellido}}</td>
-        <td class="id">ID: {{pasciente.id}}</td>
-        <td><input type="button" value="Mostrar" (click)="pushDetailPasciente(pasciente.estatura, pasciente.peso)"></td>
+      <tr *ngFor="let tutoria of tutorias">
+        <td class="Tema">{{tutoria.tema}} - {{tutoria.fecha}}</td>
+        <td class="id">ID: {{tutoria.id_tutoria}}</td>
+        <td><input type="button" value="Mostrar" (click)="pushDetailPasciente(tutoria.estatura, tutoria.peso)"></td>
       </tr>
       </table>
   </div>
