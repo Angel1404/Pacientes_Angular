@@ -9,17 +9,26 @@
             <div id="contenedor">
               <div class="cont_titulo">
                 <p class="subtitulo">Categoria de peso: </p>
-                <p class="texto"> {{selectCategoria.estado}}</p>
+                <p class="texto"> {{tutoria.tema}}</p>
               </div>
               <div class="cont_descripcion">
                 <p class="subtitulo">Dietas:</p>
-                <ul *ngFor="let plan of planDietarios">
+                <ul>
                   <li class="texto">
-                    {{plan.dieta}}
+                    {{tutoria.id_tutoria}}
+                  </li>
+                  <li class="texto">
+                    {{tutoria.id_estudiante}}
+                  </li>
+                  <li class="texto">
+                    {{tutoria.id_tutor}}
+                  </li>
+                  <li class="texto">
+                    {{tutoria.comentario}}
                   </li>
                 </ul>
               </div> 
-              <input type="button" value="Volver" (click)="back()">
+              <input type="button" value="Volver" (click)="goTo()">
             </div>
           </td>
         </tr>

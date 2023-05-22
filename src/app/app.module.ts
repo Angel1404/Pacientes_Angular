@@ -5,13 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceComponent } from './service/service.component';
 import { HttpClientModule } from '@angular/common/http';
-import { UserDetailComponent } from './user-detail/user-detail.component';
+import { TutoriaDetailComponent } from './tutoria-detail/tutoria-detail.component';
+import { CreateTutoriaComponent } from './create-tutoria/create-tutoria.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ServiceComponent,
-    UserDetailComponent
+    TutoriaDetailComponent,
+    CreateTutoriaComponent
   ],
   imports: [
     BrowserModule,

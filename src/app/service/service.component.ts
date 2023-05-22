@@ -24,18 +24,22 @@ export class ServiceComponent {
 
 //Peticion a la api de tutorias
   getTutorias() {
+    const headers = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "POST, PUT, DELETE, GET, OPTIONS",
+  "Access-Control-Allow-Headers": "*"
+};
     return this.http.get<TutoriasModels[]>(urlBase + '/Tutorias/', {
-      headers: {"Access-Control-Allow-Origin": "*","Access-Control-Allow-Methods": "POST, OPTIONS, GET", "Accept":"*/*"},
+      headers: headers
     } ).subscribe(( res: TutoriasModels[] ) =>{
     this.tutorias = res;
-
     });
   };
 
   //Metodo para navegar as la pantalla de detail
-  pushDetailPasciente(estatura : number, peso:number  ){ //Se piden por parametros los datos que necesitamos en la otra pantalla
-    const querys = {estatura : estatura, peso : peso}; // Se establecen los querys como mapa 
-    this.router.navigate(['/detallePasciente'], { queryParams: querys }); //Se navega con esta funcion a la otra pantalla, mandandole los datos por querys paramts.
+  pushDetailPasciente(id: String  ){ //Se piden por parametros los datos que necesitamos en la otra pantalla
+    const querys = {idTutoria : id}; // Se establecen los querys como mapa 
+    this.router.navigate(['/detalleTutoria'], { queryParams: querys }); //Se navega con esta funcion a la otra pantalla, mandandole los datos por querys paramts.
   }
 
 }
