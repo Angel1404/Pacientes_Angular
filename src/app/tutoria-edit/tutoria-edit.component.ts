@@ -22,7 +22,7 @@ export class TutoriaEditComponent {
 
     tutoria : any;
 
-editTutoria(idTutoria: String){
+editTutoria(idTutoria: number){
 
   this.http.put(urlBase + '/Tutorias/' + idTutoria,{
     "tema": "",//Variable con el valor del tema a cambiar, si no hay datos a cambiar, se manda el mismo tema que hay
@@ -36,7 +36,7 @@ editTutoria(idTutoria: String){
 
 }
   //Metodo para navegar as la pantalla del detalle de la tutoria despues de haberla editado
-  pushDetailTutoria( idTutoria: String){ //Se piden por parametros los datos que necesitamos en la otra pantalla
+  pushDetailTutoria( idTutoria: number){ //Se piden por parametros los datos que necesitamos en la otra pantalla
     const querys = {idTutoria : idTutoria}; // Se establecen los querys como mapa 
     this.router.navigate(['/detalleTutoria'], {queryParams: querys}); //Se navega con esta funcion a la otra pantalla, mandandole los datos por querys paramts.
   }

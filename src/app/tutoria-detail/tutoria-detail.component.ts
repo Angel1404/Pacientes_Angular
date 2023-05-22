@@ -21,18 +21,25 @@ export class TutoriaDetailComponent {
     this.idTutoria = this.route.snapshot.queryParams['idTutoria'];
     
   }
-  tutoria : any ;
-  idTutoria : String = '' ;
+  tutoria : any ; // Aqui se almacena la tutoria que viene del metodo getTutoria y esta variable es la que tiene los datos a mostrar en la vista
+  idTutoria : number = 0 ; //Esta solo tiene el id de la tutoria que viene del listado de cada una de ellas
 
   getTutoria(){
     this.http.get<TutoriasModels>(urlBase + '/Tutorias/'+ this.idTutoria).subscribe((res: TutoriasModels)=>{
       this.tutoria = res;
     });
   }
+  deleteTutoria(idTutoria: number){
+this.http.delete(urlBase + "Tutorias/" + idTutoria).subscribe(
+  (res) =>{
+    //Colocar popuo de la tutoria eliminada si la respuesta es Status code 200 {"Response": "Tutoria eliminada"}
+  }
+);
+  }
 
   //Metodo para regresar a la pantalla anterior
   goTo(){
-    const querys = {tutoria : this.tutoria}; // Se establecen los querys como mapa 
+    const querys = {tutoria : this.idTutoria}; // Se establecen los querys como mapa 
 
     this.router.navigate(['/editTutoria'],{ queryParams: querys });
 

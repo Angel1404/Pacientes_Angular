@@ -17,7 +17,7 @@
       <tr *ngFor="let tutoria of tutorias">
         <td class="Tema">{{tutoria.tema}} - {{tutoria.fecha}}</td>
         <td class="id">ID: {{tutoria.id_tutoria}}</td>
-        <td><input type="button" value="Mostrar" (click)="pushDetailPasciente(tutoria.estatura, tutoria.peso)"></td>
+        <td><input type="button" value="Mostrar" (click)="pushDetailPasciente(tutoria.id_tutoria)"></td>
       </tr>
       </table>
   </div>

@@ -37,7 +37,7 @@ export class ServiceComponent {
   };
 
   //Metodo para navegar as la pantalla de detail
-  pushDetailPasciente(id: String  ){ //Se piden por parametros los datos que necesitamos en la otra pantalla
+  pushDetailPasciente(id: number){ //Se piden por parametros los datos que necesitamos en la otra pantalla
     const querys = {idTutoria : id}; // Se establecen los querys como mapa 
     this.router.navigate(['/detalleTutoria'], { queryParams: querys }); //Se navega con esta funcion a la otra pantalla, mandandole los datos por querys paramts.
   }
